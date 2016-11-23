@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11542"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="SetShortcutWindowController" customModule="ShadowsocksX_NG" customModuleProvider="target">
+            <connections>
+                <outlet property="autoModeShortcutView" destination="dc7-dG-nKU" id="igO-yQ-ubx"/>
+                <outlet property="globalModeShortcutView" destination="aVv-Df-5Wc" id="LLo-dU-Fi4"/>
+                <outlet property="manualModeShortcutView" destination="WWj-Rk-48c" id="wTh-GS-lN7"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <window title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" animationBehavior="default" id="QvC-M9-y7g">
+            <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES"/>
+            <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+            <rect key="contentRect" x="196" y="240" width="347" height="125"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1057"/>
+            <view key="contentView" wantsLayer="YES" id="EiT-Mj-1SZ">
+                <rect key="frame" x="0.0" y="0.0" width="347" height="125"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="IDm-Au-Cax">
+                        <rect key="frame" x="14" y="90" width="123" height="19"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="19" id="zCH-x0-5fj"/>
+                        </constraints>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="AutoModeShortcut:" id="muK-1q-l3F">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="bVr-wd-sBL">
+                        <rect key="frame" x="14" y="55" width="134" height="19"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="19" id="qgQ-lm-Wrm"/>
+                        </constraints>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="GlobalModeShortcut:" id="oyw-5u-SOU">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="8hm-q8-Wk5">
+                        <rect key="frame" x="14" y="20" width="139" height="19"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="19" id="v3w-rU-YKE"/>
+                        </constraints>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="ManualModeShortcut:" id="Qdx-Rt-w7I">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <customView translatesAutoresizingMaskIntoConstraints="NO" id="aVv-Df-5Wc" customClass="MASShortcutView">
+                        <rect key="frame" x="167" y="55" width="160" height="19"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="19" id="Hbx-aa-CRz"/>
+                            <constraint firstAttribute="width" constant="160" id="kuT-5I-SBc"/>
+                        </constraints>
+                    </customView>
+                    <customView translatesAutoresizingMaskIntoConstraints="NO" id="WWj-Rk-48c" customClass="MASShortcutView">
+                        <rect key="frame" x="167" y="20" width="160" height="19"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="19" id="Kbh-q5-Brl"/>
+                            <constraint firstAttribute="width" constant="160" id="gIR-Oj-rtj"/>
+                        </constraints>
+                    </customView>
+                    <customView translatesAutoresizingMaskIntoConstraints="NO" id="dc7-dG-nKU" customClass="MASShortcutView">
+                        <rect key="frame" x="167" y="90" width="160" height="19"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="19" id="bFB-Yy-CbC"/>
+                            <constraint firstAttribute="width" constant="160" id="dzr-iI-AlK"/>
+                        </constraints>
+                    </customView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="IDm-Au-Cax" firstAttribute="leading" secondItem="EiT-Mj-1SZ" secondAttribute="leading" constant="16" id="1Ho-8A-GQK"/>
+                    <constraint firstItem="bVr-wd-sBL" firstAttribute="top" secondItem="IDm-Au-Cax" secondAttribute="bottom" constant="16" id="1v6-Yp-Hkg"/>
+                    <constraint firstItem="WWj-Rk-48c" firstAttribute="centerX" secondItem="dc7-dG-nKU" secondAttribute="centerX" id="2u3-M8-ug9"/>
+                    <constraint firstItem="8hm-q8-Wk5" firstAttribute="leading" secondItem="EiT-Mj-1SZ" secondAttribute="leading" constant="16" id="4JU-ef-aBU"/>
+                    <constraint firstItem="dc7-dG-nKU" firstAttribute="centerY" secondItem="IDm-Au-Cax" secondAttribute="centerY" id="BAq-7b-hnB"/>
+                    <constraint firstItem="IDm-Au-Cax" firstAttribute="top" secondItem="EiT-Mj-1SZ" secondAttribute="top" constant="16" id="E1E-9P-Sbk"/>
+                    <constraint firstItem="aVv-Df-5Wc" firstAttribute="centerY" secondItem="bVr-wd-sBL" secondAttribute="centerY" id="FGn-Xe-77b"/>
+                    <constraint firstItem="bVr-wd-sBL" firstAttribute="leading" secondItem="EiT-Mj-1SZ" secondAttribute="leading" constant="16" id="GpB-qq-2ia"/>
+                    <constraint firstItem="WWj-Rk-48c" firstAttribute="leading" secondItem="8hm-q8-Wk5" secondAttribute="trailing" constant="16" id="HSo-TV-WnI"/>
+                    <constraint firstItem="WWj-Rk-48c" firstAttribute="centerY" secondItem="8hm-q8-Wk5" secondAttribute="centerY" id="qay-Ed-TtY"/>
+                    <constraint firstItem="aVv-Df-5Wc" firstAttribute="centerX" secondItem="dc7-dG-nKU" secondAttribute="centerX" id="s1X-ng-e0c"/>
+                    <constraint firstItem="8hm-q8-Wk5" firstAttribute="top" secondItem="bVr-wd-sBL" secondAttribute="bottom" constant="16" id="ycF-9F-gO4"/>
+                </constraints>
+            </view>
+            <point key="canvasLocation" x="59.5" y="153.5"/>
+        </window>
+    </objects>
+</document>

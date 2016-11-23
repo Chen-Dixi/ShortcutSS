@@ -7,7 +7,7 @@
 //
 
 import Cocoa
-
+import MASShortcut
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDelegate {
@@ -18,6 +18,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDele
     var proxyPreferencesWinCtrl: ProxyPreferencesController!
     var editUserRulesWinCtrl: UserRulesController!
     var httpPreferencesWinCtrl : HTTPPreferencesWindowController!
+    var setShortcutsWinCtrl: SetShortcutWindowController!
     
     var launchAtLoginController: LaunchAtLoginController = LaunchAtLoginController()
     
@@ -165,6 +166,19 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDele
         ProxyConfHelper.startMonitorPAC()
         applyConfig()
         SyncSSLocal()
+        
+        // ShortCut
+        MASShortcutBinder.shared().bindShortcut(withDefaultsKey: SetShortcutWindowController.autoShortcutKey, toAction: {
+            self.selectPACMode(self.autoModeMenuItem)
+        })
+        
+        MASShortcutBinder.shared().bindShortcut(withDefaultsKey: SetShortcutWindowController.globalShortcutKey, toAction: {
+            self.selectGlobalMode(self.globalModeMenuItem)
+        })
+        
+        MASShortcutBinder.shared().bindShortcut(withDefaultsKey: SetShortcutWindowController.manualShortcutKey, toAction: {
+            self.selectManualMode(self.manualModeMenuItem)
+        })
     }
     
     func applicationWillTerminate(_ aNotification: Notification) {
@@ -174,7 +188,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDele
         ProxyConfHelper.disableProxy()
     }
     
-    func applyConfig() {
+    public func applyConfig() {
         let defaults = UserDefaults.standard
         let isOn = defaults.bool(forKey: "ShadowsocksOn")
         let mode = defaults.string(forKey: "ShadowsocksRunningMode")
@@ -340,6 +354,18 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDele
         updateRunningModeMenu()
     }
     
+    @IBAction func setShortcuts(_ sender: Any) {
+        if setShortcutsWinCtrl != nil {
+            setShortcutsWinCtrl.close()
+        }
+        let ctrl = SetShortcutWindowController(windowNibName: "SetShortcutWindowController")
+        setShortcutsWinCtrl = ctrl
+        
+        ctrl.showWindow(self)
+        NSApp.activate(ignoringOtherApps: true)
+        ctrl.window?.makeKeyAndOrderFront(self)
+    }
+    
     @IBAction func showLogs(_ sender: NSMenuItem) {
         let ws = NSWorkspace.shared()
         if let appUrl = ws.urlForApplication(withBundleIdentifier: "com.apple.Console") {
@@ -374,7 +400,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDele
         }
     }
     
-    func updateRunningModeMenu() {
+    public func updateRunningModeMenu() {
         let defaults = UserDefaults.standard
         let mode = defaults.string(forKey: "ShadowsocksRunningMode")
         

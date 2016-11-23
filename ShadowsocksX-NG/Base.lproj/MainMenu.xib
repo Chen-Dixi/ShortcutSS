@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11201"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11542"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="NSApplication">
@@ -138,6 +138,12 @@
                         <action selector="toggleLaunghAtLogin:" target="Voe-Tx-rLC" id="erk-ce-mO3"/>
                     </connections>
                 </menuItem>
+                <menuItem title="Set Shortcuts" id="8tY-AT-pN1">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="setShortcuts:" target="Voe-Tx-rLC" id="Fnf-fX-yue"/>
+                    </connections>
+                </menuItem>
                 <menuItem isSeparatorItem="YES" id="DTJ-NF-Wxr"/>
                 <menuItem title="Show Logs..." id="Jfy-sf-Fhl">
                     <modifierMask key="keyEquivalentModifierMask"/>
@@ -164,20 +170,7 @@
                     </connections>
                 </menuItem>
             </items>
-            <point key="canvasLocation" x="22" y="89"/>
-        </menu>
-        <menu id="2oY-e9-q1Z">
-            <items>
-                <menuItem title="Item 1" id="oR3-cT-RTC">
-                    <modifierMask key="keyEquivalentModifierMask"/>
-                </menuItem>
-                <menuItem title="Item 2" id="lay-XB-0oV">
-                    <modifierMask key="keyEquivalentModifierMask"/>
-                </menuItem>
-                <menuItem title="Item 3" id="m00-ru-6Po">
-                    <modifierMask key="keyEquivalentModifierMask"/>
-                </menuItem>
-            </items>
+            <point key="canvasLocation" x="-282.5" y="276.5"/>
         </menu>
     </objects>
 </document>

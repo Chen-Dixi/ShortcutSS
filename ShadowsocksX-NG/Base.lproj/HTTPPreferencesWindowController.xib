@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11201"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11542"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="HTTPPreferencesWindowController" customModule="ShadowsocksX_NG" customModuleProvider="target"/>
@@ -10,14 +11,14 @@
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
         <window title="HTTP Proxy Preferences" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" frameAutosaveName="" animationBehavior="default" id="vS3-DL-Nq3">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
-            <rect key="contentRect" x="109" y="131" width="209" height="197"/>
+            <rect key="contentRect" x="109" y="131" width="209" height="179"/>
             <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1057"/>
             <view key="contentView" id="Qef-Mj-9z1">
-                <rect key="frame" x="0.0" y="0.0" width="209" height="197"/>
+                <rect key="frame" x="0.0" y="0.0" width="209" height="179"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <button translatesAutoresizingMaskIntoConstraints="NO" id="hgn-81-fsH">
-                        <rect key="frame" x="18" y="161" width="138" height="18"/>
+                        <rect key="frame" x="18" y="143" width="138" height="18"/>
                         <buttonCell key="cell" type="check" title="HTTP Proxy Enable" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="dqU-MG-Sum">
                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                             <font key="font" metaFont="system"/>
@@ -27,7 +28,7 @@
                         </connections>
                     </button>
                     <button translatesAutoresizingMaskIntoConstraints="NO" id="P4f-0N-7JI">
-                        <rect key="frame" x="18" y="133" width="141" height="18"/>
+                        <rect key="frame" x="18" y="115" width="141" height="18"/>
                         <buttonCell key="cell" type="check" title="Follow Global Mode" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="ofk-Pc-c8f">
                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                             <font key="font" metaFont="system"/>
@@ -104,7 +105,7 @@
             <connections>
                 <outlet property="delegate" destination="-2" id="mD3-X9-VEN"/>
             </connections>
-            <point key="canvasLocation" x="-19.5" y="109.5"/>
+            <point key="canvasLocation" x="42.5" y="134.5"/>
         </window>
         <userDefaultsController representsSharedInstance="YES" id="Adn-6l-wm4"/>
         <numberFormatter formatterBehavior="default10_4" usesGroupingSeparator="NO" groupingSize="0" minimumIntegerDigits="0" maximumIntegerDigits="42" id="ji3-e7-HNW" userLabel="Port Number Formatter">
