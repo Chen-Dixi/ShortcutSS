@@ -1,0 +1,12 @@
+
+/* Class = "NSTextFieldCell"; title = "ManualModeShortcut:"; ObjectID = "Qdx-Rt-w7I"; */
+"Qdx-Rt-w7I.title" = "手动代理快捷键：";
+
+/* Class = "NSWindow"; title = "Proxy Shortcut Preferences"; ObjectID = "QvC-M9-y7g"; */
+"QvC-M9-y7g.title" = "切换代理快捷键设置";
+
+/* Class = "NSTextFieldCell"; title = "AutoModeShortcut:"; ObjectID = "muK-1q-l3F"; */
+"muK-1q-l3F.title" = "自动代理快捷键：";
+
+/* Class = "NSTextFieldCell"; title = "GlobalModeShortcut:"; ObjectID = "oyw-5u-SOU"; */
+"oyw-5u-SOU.title" = "全局代理快捷键：";

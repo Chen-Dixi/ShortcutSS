@@ -138,7 +138,7 @@
                         <action selector="toggleLaunghAtLogin:" target="Voe-Tx-rLC" id="erk-ce-mO3"/>
                     </connections>
                 </menuItem>
-                <menuItem title="Set Shortcuts" id="8tY-AT-pN1">
+                <menuItem title="Proxy Shortcut Preferences" id="8tY-AT-pN1">
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <connections>
                         <action selector="setShortcuts:" target="Voe-Tx-rLC" id="Fnf-fX-yue"/>
