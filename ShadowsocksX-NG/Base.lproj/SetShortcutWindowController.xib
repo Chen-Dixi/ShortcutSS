@@ -94,7 +94,7 @@
                     <constraint firstItem="8hm-q8-Wk5" firstAttribute="top" secondItem="bVr-wd-sBL" secondAttribute="bottom" constant="16" id="ycF-9F-gO4"/>
                 </constraints>
             </view>
-            <point key="canvasLocation" x="59.5" y="153.5"/>
+            <point key="canvasLocation" x="-94" y="184"/>
         </window>
     </objects>
 </document>
